@@ -9,9 +9,9 @@ const waitTime = (time = 100) => {
 const listData = [
   {
     id: '1',
-    userId: 'YiDang2022',
-    tenantName: '一当科技',
-    realName: 'huhao',
+    userId: 'user001',
+    tenantName: '',
+    realName: '用户002',
     roleName: null,
     phone: null,
     status: 2,
@@ -19,9 +19,9 @@ const listData = [
   },
   {
     id: '1',
-    userId: 'HuaZhuo2022',
-    tenantName: '华卓科技',
-    realName: 'huyy',
+    userId: 'user002',
+    tenantName: '',
+    realName: '用户002',
     roleName: null,
     phone: null,
     status: 2,

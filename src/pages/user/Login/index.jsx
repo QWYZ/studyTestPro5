@@ -141,7 +141,7 @@ const Login = () => {
 
           <h1>学习与积累</h1>
           <div className={style.gy2}>
-            商品、订单、库存统一管理
+            学习与试验
             <div style={{ height: 20, width: '100%' }}>
               <Chart renderer={'canvas'} option={option3} />
             </div>

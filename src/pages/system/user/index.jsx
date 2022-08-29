@@ -64,10 +64,10 @@ class SysUser extends Component {
     _openConfirmModal = (data, type) => {
         let title = '';
         let content = null;
-        if (type === 'freezeUser') { title = `确认冻结【${data.username}】该用户吗？` }
-        if (type === 'unfreezeUser') { title = `确认解冻【${data.username}】该用户吗？` }
+        if (type === 'freezeUser') { title = `确认冻结【${data.realName}】该用户吗？` }
+        if (type === 'unfreezeUser') { title = `确认解冻【${data.realName}】该用户吗？` }
         if (type === 'resetPassword') {
-            title = `确认重置【${data.username}】该账号的密码吗？`;
+            title = `确认重置【${data.realName}】该账号的密码吗？`;
             content = <span style={{ color: 'gray' }}>密码将重置为：<b>123456</b></span>
         }
         Modal.confirm({
@@ -229,7 +229,7 @@ class SysUser extends Component {
                     </CheckButtonPerms>,
                     <CheckButtonPerms key={'option4'} perms={'system-user_delete'}>
                         <Popconfirm
-                            title={`确认删除【${data.userId}】该用户吗？`}
+                            title={`确认删除【${data.realName}】该用户吗？`}
                             onConfirm={() => { this._deleteUser(data.id) }}
                             okText="确认"
                             cancelText="取消"
