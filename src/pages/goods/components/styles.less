@@ -1,0 +1,134 @@
+#multiSpec {
+  .form-item-help {
+    color: rgba(0, 0, 0, 0.45);
+    line-height: 32px;
+  }
+
+  // 商品多规格
+  .spec-group {
+    width: 895px;
+    margin-bottom: 15px;
+    line-height: normal;
+
+    .ant-input {
+      height: 28px;
+      padding: 4px 11px;
+      font-size: 13px;
+      line-height: 1.5;
+
+      &::placeholder {
+        font-size: 13px;
+      }
+    }
+
+    .form-item-help {
+      line-height: 36px;
+    }
+
+    .spec-group-item {
+      padding: 7px 12px;
+      line-height: 28px;
+      background: #f4f5f9;
+
+      .group-item-input {
+        float: left;
+        width: 180px;
+      }
+
+      .group-item-delete {
+        float: right;
+        font-size: 12px;
+      }
+    }
+
+    .spec-value {
+      padding: 8px 35px;
+      background: #fbfbfb;
+
+      .spec-value-add,
+      .spec-value-item {
+        float: left;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+
+      .spec-value-add {
+        height: 28px;
+        line-height: 28px;
+
+        a {
+          font-size: 12px;
+        }
+      }
+
+      .spec-value-item {
+        position: relative;
+        margin-right: 20px;
+
+        .value-item-input {
+          width: 186px;
+        }
+
+        &:hover {
+          .icon-close {
+            display: block;
+          }
+        }
+
+        .icon-close {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          display: none;
+          color: #7d7d7d;
+          font-size: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // 添加规格按钮
+  .spec-group-add-btn {
+    font-size: 13px;
+  }
+
+  // 批量设置sku
+  .sku-batch {
+    margin-bottom: 12px;
+    line-height: 40px;
+    .title {
+      margin-right: 15px;
+      font-size: 14px;
+      line-height: 28px;
+    }
+    :global {
+      // /deep/.ant-input,
+      // /deep/.ant-input-number {
+      //   width: 120px;
+      //   margin-right: 15px;
+      // }
+      // /deep/.ant-input {
+      //   width: 140px;
+      // }
+    }
+  }
+
+  // sku列表
+  .sku-list {
+    width: 895px;
+    :global {
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td {
+        white-space: nowrap;
+      }
+      .ant-input-sm,
+      .ant-input-number-sm {
+        height: 28px;
+      }
+      .ant-input-number-sm input {
+        height: 26px;
+      }
+    }
+  }
+}

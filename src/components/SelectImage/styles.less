@@ -1,0 +1,115 @@
+.image-list {
+  // margin-bottom: -10px;
+  // 多选模式下margin
+  &.multiple {
+    .file-item,
+    .selector {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  // 文件元素
+  .file-item {
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    // padding: 2px;
+    background: #fff;
+    border: 1px solid #ddd;
+    .img-cover {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: no-repeat center center / 100%;
+    }
+    &:hover {
+      .icon-close {
+        display: block;
+      }
+    }
+    .icon-close {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      z-index: 10;
+      display: none;
+      color: #c5c5c5;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        color: #7d7d7d;
+      }
+    }
+    &:hover {
+      border: 1px solid #a7c3de;
+    }
+  }
+  //拖拽容器的副本容器样式设置
+  .helperClass {
+    opacity: 1;
+  }
+
+  // 选择器
+  .selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 80px;
+    height: 80px;
+    color: #dad9d9;
+    text-align: center;
+    border: 1px dashed #e2e2e2;
+    cursor: pointer;
+    &:hover {
+      color: #40a9ff;
+      border: 1px dashed #40a9ff;
+    }
+    .icon-plus {
+      font-size: 32px;
+    }
+  }
+}
+
+// 文件元素
+.file-item {
+  position: relative;
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  // padding: 2px;
+  background: #fff;
+  border: 1px solid #ddd;
+  .img-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center / 100%;
+  }
+  &:hover {
+    .icon-close {
+      display: block;
+    }
+  }
+  .icon-close {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    z-index: 10;
+    display: none;
+    color: #c5c5c5;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover {
+      color: #7d7d7d;
+    }
+  }
+  &:hover {
+    border: 1px solid #a7c3de;
+  }
+}

@@ -1,0 +1,561 @@
+//注意：拖拽容器中的的css样式需要，单独从容器外层的样式类名中移出来，
+//因为react-sortable-hoc组件在拖拽时生成副本组件位于document.body的底部，如不移出来此时副本组件将无法获取到相应样式
+
+  ol,
+  ul,
+  dl {
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    margin: 0;
+  }
+  /* flex布局 */
+  .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  //清除浮动
+  .clearfix {
+    zoom: 1;
+
+    &::before,
+    &::after {
+      display: block;
+      content: ' ';
+    }
+
+    &::after {
+      clear: both;
+      height: 0;
+      font-size: 0;
+      visibility: hidden;
+    }
+  }
+  /*手机区*/
+  .flexBox {
+    flex: 1;
+  }
+  // 文字超出隐藏(一行)
+  // 需要设置文字容器的宽度
+  .onelineHide {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+  }
+  // 文字超出隐藏(两行)
+  // 需要设置文字容器的宽度
+  .twolineHide {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+  }
+  .phoneContent {
+    width: 377px;
+    // margin-top: 25px;
+    border-radius: 3px;
+    box-shadow: 0 0 28px 0 #ccc;
+    border: 1px solid #ddd;
+    background: #fff;
+    .phoneTop{
+      width: 100%;
+      height: 66px;
+      text-align: center;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      // background-image: url('./img2/phone-top-black.png');
+      &.black {
+        background-image: url('./img2/phone-top-black.png');
+      }
+  
+      &.white {
+        background-image: url('./img2/phone-top-white.png');
+      }
+  
+      .title {
+        margin: 0;
+        font-size: 14px;
+        font-weight: normal;
+        white-space: nowrap;
+        line-height: 88px;
+      }
+    }
+
+    // diy元素容器
+    .phoneMain {
+      position: relative;
+      border-top: 0;
+      user-select: none;
+      line-height: normal;
+
+      .content {
+        overflow-y: auto;
+        height: 580px;
+        &::-webkit-scrollbar {
+          /*滚动条整体样式*/
+          width : 6px;  /*高宽分别对应横竖滚动条的尺寸*/
+          height: 1px;
+        }
+        &::-webkit-scrollbar-thumb {
+          /*滚动条里面小方块*/
+          border-radius: 10px;
+          box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+          background   : #bebcbc;
+        }
+         &::-webkit-scrollbar-track {
+          /*滚动条里面轨道*/
+          box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+          border-radius: 10px;
+          background   : #ededed;
+        }
+      }
+
+      a {
+        color: #337ab7;
+      }     
+
+    }
+  }
+
+  //组件外层虚线边框样式
+  .optional {
+    position: relative;
+
+    &:before {
+      content: '';
+    }
+
+    &.__z10:before {
+      z-index: 10;
+    }
+
+    &.__no-move:before {
+      cursor: pointer !important;
+    }
+
+    &.selected:before,
+    &:hover:before {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px dashed #00a0e9;
+      cursor: move;
+    }
+  }
+
+  //拖拽容器的副本容器样式设置
+  .helperClass{
+    opacity: 1;
+  }
+
+  //组件单元容器
+  .deviseItem {
+    display: block;
+    overflow: hidden;
+    font-size: 13px;
+
+    .btnEditDel {
+      height: 16px;
+      position: absolute;
+      right: 2px;
+      bottom: 2px;
+      display: none;
+      z-index: 90;
+
+      &>div {
+        width: 32px;
+        height: 16px;
+        line-height: 16px;
+        display: inline-block;
+        text-align: center;
+        font-size: 10px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.4);
+        margin-left: 2px;
+        cursor: pointer;
+        position: relative;
+        z-index: 11;
+      }
+    }
+    // 选中状态
+    &.selected,
+    &:hover {
+
+      // 显示删除按钮
+      .btnEditDel {
+        display: block;
+      }
+    }
+  }
+
+  //搜索栏
+  .diySearch {
+    background: #f1f1f2;
+    padding: 10px 10px;
+
+    .inner {
+      height: 30px;
+      background: #fff;
+      overflow: hidden;
+
+      &.radius {
+        border-radius: 5px;
+      }
+
+      &.round {
+        border-radius: 30px;
+      }
+      .searchInput {
+        height: 30px;
+        //width: 100%;
+        line-height: 30px;
+        color: #999999;
+        padding: 0 10px;
+        font-size: 13px;
+
+        .searchIcon {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+  //公告栏
+  .diyNotice {
+    font-size: 14px;
+
+    .noticeBody {
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    .notice_icon {
+      font-size: 17px;
+    }
+
+    .notice_text {
+      padding-left: 6px;
+      line-height: 18px;
+    }
+  }
+  //轮播图
+  .diyBanner {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow: hidden;
+    //position: relative;
+    img {
+      display: none;
+      width: 100%;
+
+      &:first-child {
+        display: block;
+      }
+    }
+
+    :global{
+      .ant-carousel .slick-dots li button {
+          display: block;
+          width: 8px;
+          height: 8px;
+          padding: 0;
+          color: transparent;
+          font-size: 0;
+          background: #fff;
+          border: 0;
+          border-radius: 100%;
+          outline: none;
+          cursor: pointer;
+          opacity: 0.3;
+          transition: all 0.5s;
+      }
+      .ant-carousel .slick-dots li.slick-active button {
+          background: #fff;
+          opacity: 1;
+      }
+      .ant-carousel .slick-dots li.slick-active {
+          width: 16px;
+      }
+    }
+
+    .dots {
+      height: 14px;
+      padding: 0 10px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      opacity: 0.8;
+      display: flex;
+      justify-content: center;
+
+
+      &Item {
+        margin-right: 3px;
+        height: 10px;
+        width: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &.rectangle {
+        .dots-item {
+          width: 16px;
+        }
+      }
+
+      &.square {
+        .dots-item {
+          width: 10px;
+        }
+      }
+
+      &.round {
+        .dotsItem {
+          height: 10px;
+          width: 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  // 辅助线
+  .diyGuide {
+    .line {
+      height: 0;
+      width: 100%;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  // 导航组
+  .diyNavBar {
+    .itemNav {
+      float: left;
+      margin: 10px 0;
+      text-align: center;
+
+      .itemImage {
+        text-align: center;
+        margin-bottom: 4px;
+
+        img {
+          height: 44px;
+          width: 44px;
+        }
+      }
+
+    }
+
+    /* 分列布局 */
+    .itemNav3 {
+      width: 33.33333333%;
+    }
+
+    .itemNav4 {
+      width: 25%;
+    }
+
+    .itemNav5 {
+      width: 20%;
+    }
+
+  }
+  //商品组
+  .diyGoods {
+    .goodsList {
+      padding: 2px;
+
+      &.display_slide {
+        //overflow-x: scroll;
+        //overflow-y: hidden;
+        overflow-x: hidden;
+        white-space: nowrap;
+        font-size: 0;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .goodsItem {
+          display: inline-block;
+          //float: unset;
+        }
+      }
+
+      &.display_list {
+        .goodsItem {
+          float: left;
+        }
+      }
+
+      &.column_1 {
+        .goodsItem {
+          width: 100%;
+          height: 140px;
+          margin-bottom: 6px;
+          padding: 10px;
+          box-sizing: border-box;
+          background: #fff;
+        }
+
+        .goodsItem:last-child {
+          margin-bottom: 0;
+        }
+
+        /* 商品图片 */
+        .goodsItemLeft {
+          display: flex;
+          width: 40%;
+          background: #fff;
+          align-items: center;
+        }
+
+        .goodsItemLeft img {
+          display: block;
+          width: 120px;
+          height: 120px;
+        }
+
+        .goodsItemRight {
+          position: relative;
+          width: 60%;
+        }
+
+        /* 商品名称 */
+        .goodsItemRight .goodsItemTitle {
+          height: 32px;
+          margin-top: 10px;
+          font-size: 13px;
+          line-height: 1.3;
+          color: #333;
+        }
+
+        .goodsItemDesc {
+          margin-top: 4px;
+        }
+
+        /* 商品卖点 */
+        .descSellingPoint {
+          width: 200px;
+          height: 20px;
+          font-size: 12px;
+          color: #ff495e;
+        }
+
+        .descGoodsSales {
+          color: #999;
+          font-size: 12px;
+        }
+
+        /* 商品价格 */
+        .descFooter {
+          //margin-top: 6px;
+          font-size: 12px;
+        }
+
+        .descFooter .priceX {
+          margin-right: 8px;
+          color: rgb(240, 60, 60);
+          font-size: 15px;
+        }
+
+        .descFooter .priceY {
+          color: #999;
+          text-decoration: line-through;
+        }
+      }
+
+      &.column_2 {
+        .goodsItem {
+          width: 50%;
+        }
+      }
+
+      &.column_3 {
+        .goodsItem {
+          width: 33.33333%;
+        }
+      }
+
+      .goodsItem {
+        padding: 3px;
+
+        .goodsImage {
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+          overflow: hidden;
+          background: #fff;
+
+          &:after {
+            content: '';
+            display: block;
+            margin-top: 100%;
+            /* margin 百分比相对父元素宽度计算 */
+          }
+
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            -o-object-fit: cover;
+            object-fit: cover;
+          }
+        }
+
+        .detail {
+          padding: 4px;
+          background: #fff;
+          font-size: 13px;
+
+          .goodsName {
+            color: #484848;
+            height: 32px;
+            overflow: hidden;
+            font-size: 13px;
+            line-height: 1.3;
+          }
+
+          .goodsPrice {
+            font-size: 15px;
+            color: #f00;
+          }
+
+          .linePrice {
+            margin-left: 5px;
+            font-size: 12px;
+            text-decoration: line-through;
+            color: #999;
+          }
+
+          .sellingPoint {
+            font-size: 12px;
+            color: #f20c59;
+          }
+        }
+
+        .smallUnit {
+          font-size: 13px;
+          margin-right: 2px;
+        }
+      }
+    }
+  }

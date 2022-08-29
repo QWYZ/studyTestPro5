@@ -1,0 +1,298 @@
+// @import '~antd/es/style/themes/default.less';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.login {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('./img/bg1.svg'), radial-gradient(circle, #0070c3, #004eaa, #292a8b);
+  background-size: 100% 100vh;
+}
+.bg1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%;
+  height: 237px;
+  background: url('../../../../public/img/home_bg.gif'), #347ebc;
+  transform: skewX(-10deg);
+  transform: translate(-50%, -50%) skewX(-10deg);
+  opacity: 0.6;
+  // top: calc((100vh - 237px) / 2);
+}
+.gyl {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 15%;
+  width: 510px;
+  height: 237px;
+  margin: auto;
+  padding-top: 20px;
+  color: #ffffff;
+  font-size: 72px;
+
+  h1 {
+    color: transparent;
+    font-size: 72px;
+    text-shadow: 5px 10px 5px #292b8b88;
+    background: linear-gradient(10deg, #e7f0f5, #ffffff, #00a0e9, #ffffff);
+    background-clip: text;
+  }
+}
+.gy2 {
+  margin-top: 10px;
+  margin-left: 6px;
+  color: #fff;
+  color: transparent;
+  font-size: 18px;
+  text-align: center;
+  background: linear-gradient(10deg, #e7f0f5, #ffffff, #00a0e9, #ffffff);
+  background-clip: text;
+  transform: skewX(-10deg);
+}
+.box {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 355px;
+  margin: auto;
+}
+.box1 {
+  width: 100%;
+  padding: 10%;
+  background: linear-gradient(rgba(255, 255, 255, 0.882), rgba(187, 219, 245, 0.79));
+  border-radius: 5px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+.header {
+  width: 100%;
+  height: 35px;
+  color: #347ebc;
+  font-size: 0.38rem;
+  text-align: center;
+}
+.item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+}
+
+.item input {
+  width: 100%;
+  height: 41px;
+  text-indent: 10px;
+  background-color: transparent;
+  border-bottom: 1px solid #347ebc;
+  outline: none;
+}
+
+.userLabel {
+  max-width: 60px;
+  height: 41px;
+  line-height: 41px;
+  border-bottom: 1px solid #347ebc;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin: 10px 0px;
+}
+.remember_box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 40px;
+}
+.remember .text {
+  width: 100px;
+  margin-left: 10px;
+}
+.login .btn {
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  text-indent: 0;
+  background-color: #347ebc;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    background-color: #3291de;
+    cursor: pointer;
+  }
+}
+.avatar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  .avatarx {
+    width: 100px;
+    height: 100px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+  }
+}
+.code {
+  position: absolute;
+  right: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 85px;
+  height: 35px;
+}
+.code_img {
+  width: 80px;
+  height: 35px;
+}
+@media (min-width: 0px) and (max-width: 1400px) {
+  .box {
+    width: 340px;
+  }
+  .gyl {
+    width: 400px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 800px) {
+  .box {
+    top: 0px;
+    right: 20%;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 320px;
+    margin: auto;
+  }
+  .gyl {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    font-size: 72px;
+    text-align: center;
+  }
+  .gy2 {
+    width: 100%;
+    height: 60px;
+    padding: 0 50px;
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 420px) {
+  .box {
+    top: 20px;
+    right: 20%;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 300px;
+    margin: auto;
+  }
+  .gyl {
+    position: absolute;
+    top: 6%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    font-size: 36px;
+    text-align: center;
+  }
+  .gy2 {
+    width: 100%;
+    height: 60px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0);
+    font-size: 13px;
+    text-align: center;
+  }
+}
+@media (min-width: 0px) and (max-width: 330px) {
+  .box {
+    top: 20px;
+    right: 20%;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 280px;
+    margin: auto;
+  }
+  .gyl {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    font-size: 36px;
+    text-align: center;
+  }
+  .gy2 {
+    width: 100%;
+    height: 60px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0);
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media (max-height: 600px) {
+  .gyl {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+//目标是去除这些自动填充之后的默认样式
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background-color: transparent !important;
+  background-image: none;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-transition: background-color 99999s ease-in-out 99999s;
+  transition: background-color 99999s ease-in-out 99999s;
+  -webkit-transition-delay: 99999s;
+  transition-delay: 99999s;
+  // -webkit-text-fill-color: #ededed !important; //填充字体颜色
+}
+input:-internal-autofill-selected {
+  color: -internal-light-dark-color(black, white) !important;
+  background-color: transparent !important;
+  background-image: transparent !important;
+  -webkit-transition: background-color 99999s ease-in-out 9999s !important;
+  transition: background-color 99999s ease-in-out 99999s !important;
+}
+input:autofill {
+  background: transparent;
+}
+input::-webkit-input-safebox-button {
+  display: none;
+}

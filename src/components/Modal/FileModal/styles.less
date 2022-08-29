@@ -1,0 +1,174 @@
+.fileBox {
+  :global {
+    .ant-modal-header,
+    .ant-modal-footer {
+      border: none;
+    }
+    .ant-modal-body {
+      padding: 6px;
+    }
+
+    .ant-empty {
+      padding: 120px 0;
+    }
+  }
+}
+
+/* 文件库 */
+.library-box {
+  // user-select: none;
+  width: 100%;
+  // 文件分组
+  .file-group {
+    float: left;
+    width: 18%;
+    border-right: 1px solid #e6e6e6;
+    // 分组列表
+    .group-tree {
+      width: 100%;
+      height: 440px;
+      overflow-x: auto;
+      overflow-y: auto;
+      :global {
+        .ant-tree {
+          display: inline-block;
+          width: auto;
+          min-width: 100%;
+          max-height: 380px;
+        }
+      }
+    }
+
+    // 新增分组
+    .group-add {
+      display: block;
+      margin-top: 20px;
+      padding: 0 30px;
+      font-size: 13px;
+    }
+  }
+
+  // 文件列表
+  .file-list {
+    float: left;
+    width: calc(82% - 20px);
+    margin-left: 20px;
+
+    // 头部操作区
+    .top-operate {
+      margin-bottom: 10px;
+      .file-upload {
+        .upload-desc {
+          padding-right: 10px;
+          color: #999;
+          font-size: 12px;
+        }
+      }
+    }
+
+    // 文件列表
+    .file-list-body {
+      height: 455px;
+      .file-list-ul {
+        height: 417px;
+        margin: 0;
+        padding: 0;
+      }
+      .file-item {
+        position: relative;
+        float: left;
+        width: 110px;
+        height: auto;
+        margin: 8px;
+        padding: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        border-radius: 2px;
+        cursor: pointer;
+        -webkit-transition: All 0.2s ease-in-out;
+        -moz-transition: All 0.2s ease-in-out;
+        -o-transition: All 0.2s ease-in-out;
+        transition: All 0.2s ease-in-out;
+        &:hover {
+          border: 1px solid #16bce2;
+        }
+      }
+      .file-item {
+        // 文件名称
+        .file-name {
+          font-size: 12px;
+          text-align: center;
+        }
+        // 预览图
+        .img-cover {
+          width: 95px;
+          height: 95px;
+          margin: 0 auto;
+          background: no-repeat center center / 100%;
+        }
+        // 遮罩层(选中时)
+        &.active .select-mask {
+          display: block;
+        }
+        .select-mask {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: none;
+          text-align: center;
+          background: rgba(0, 0, 0, 0.41);
+          border-radius: 2px;
+          .selected-icon {
+            color: #fff;
+            font-size: 26px;
+            line-height: 122px;
+            text-align: center;
+          }
+        }
+      }
+
+      // 底部操作栏
+      .footer-operate {
+        bottom: 5px;
+        height: 28px;
+        margin-top: 10px;
+        .footer-desc {
+          margin-right: 10px;
+          color: #999;
+        }
+        .btn-mini {
+          height: 28px;
+          padding: 0 15px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+/* 清除浮动 */
+.clearfix() {
+  zoom: 1;
+
+  &::before,
+  &::after {
+    display: table;
+    content: ' ';
+  }
+
+  &::after {
+    clear: both;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+  }
+}
+
+.fl-l {
+  float: left;
+}
+
+.fl-r {
+  float: right;
+}

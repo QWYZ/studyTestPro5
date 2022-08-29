@@ -1,0 +1,15 @@
+import { ReactComponent as image } from './img/image.svg'
+import { ReactComponent as banner } from './img/banner.svg'
+import { ReactComponent as article } from './img/article.svg'
+import { ReactComponent as navBar } from './img/navBar.svg'
+import { ReactComponent as notice } from './img/notice.svg'
+import { ReactComponent as search } from './img/search.svg'
+import { ReactComponent as video } from './img/video.svg'
+import { ReactComponent as window } from './img/window.svg'
+import { ReactComponent as goods } from './img/goods.svg'
+import { ReactComponent as service } from './img/service.svg'
+import { ReactComponent as guide } from './img/guide.svg'
+import { ReactComponent as richText } from './img/richText.svg'
+import { ReactComponent as blank } from './img/blank.svg'
+
+export { image, banner, article, navBar, notice, search, video, window, goods, service, guide, richText, blank }

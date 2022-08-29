@@ -1,0 +1,46 @@
+.container {
+    margin-top: 24px;
+
+    :global {
+        ::-webkit-scrollbar {
+            width : 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background   : -webkit-gradient(linear, left top, left bottom, from(#cecdcc), to(#f3e6eb));
+            background   : linear-gradient(180deg, #cecdcc, #f3e6eb);
+            border-radius: 10px;
+            box-shadow   : inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #dde2dd;
+            border-radius   : 10px;
+        }
+    }
+}
+
+
+.leftBox {
+    padding         : 20px;
+    height          : calc(100vh - 96px);
+    background-color: white;
+    text-align      : center;
+
+    // overflow-y: auto;
+    // border: 1px solid red;
+    // .leftHeader {
+    //     // padding: 20px;
+    // }
+}
+
+
+
+
+.rightBox {
+    padding         : 20px;
+    height          : calc(100vh - 96px);
+    background-color: white;
+    // border: 1px solid rgba(220, 220, 220, 0.199);
+}

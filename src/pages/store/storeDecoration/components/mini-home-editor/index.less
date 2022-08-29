@@ -1,0 +1,294 @@
+@import '~antd/es/style/themes/default.less';
+
+  .card{
+    :global{
+      .ant-card{
+          background: #f8f9fa;
+      }
+      .ant-tabs {
+        overflow: unset;
+        .ant-tabs-nav {
+          width: 100%;
+          .ant-tabs-tab {
+            font-size: 13.5px;
+            padding: 12px 20px;
+            color: #58585f;
+            width: 105px;
+            margin: 0 30px;
+            text-align: center;
+          }
+        }
+        // .ant-tabs-ink-bar {
+        //   background-color: #58585f;
+        //   height: 2.5px;
+        // }
+      }
+      .ant-input {
+        font-size: 12px;
+        border-radius: 5px;
+      }
+      // .ant-radio-group {
+      //   font-size: 12px;
+      //   .ant-radio-button-wrapper {
+      //     height: 30px;
+      //     line-height: 28px;
+      //   }
+      // }
+      .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+        margin-left: 0;
+      }
+      .ant-checkbox-wrapper{
+        font-size: 12px;
+      }
+    }
+  }
+
+  .flexBox {
+    flex: 1;
+  }
+
+  //组件外层虚线边框样式
+  .optional {
+    position: relative;
+
+    &:before {
+      content: '';
+    }
+
+    &.__z10:before {
+      z-index: 10;
+    }
+
+    &.__no-move:before {
+      cursor: pointer !important;
+    }
+
+    &.selected:before,
+    &:hover:before {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px dashed #00a0e9;
+      cursor: move;
+    }
+  }
+
+  /*编辑区*/
+  .editor{
+    min-width: 370px;
+    max-height: 648px;
+    // padding: 10px 15px;
+    overflow:auto;
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width : 6px;  /*高宽分别对应横竖滚动条的尺寸*/
+      height: 1px;
+    }
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 10px;
+      box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background   : #bebcbc;
+    }
+     &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background   : #ededed;
+    }
+    &Title{
+      font-size: 14px;
+      font-weight: 600;
+      color: #595961;
+      margin-top: 5px;
+    }
+    // 内容
+    &Content {
+      margin-top: 15px;
+      width: 340px;
+    }
+    // 副标题
+    .subTitle {
+      text-align: center;
+      font-size: 14px;
+      color: #9797a1;
+      margin-bottom: 15px;
+      line-height: 20px;
+    }
+  }
+
+  // 文字标签
+  .label,
+  .tipsWrap,
+  .link {
+    display: block;
+    line-height: 32px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .label {
+    margin-right: 20px;
+    max-width: 164px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+  }
+
+  .tipsWrap {
+    flex: 1;
+    color: #9797a1;
+  }
+  
+
+  .blockBox {
+    border-radius: 4px;
+    padding: 10px 10px 10px 10px;
+    background: #f0f2f5;
+    margin: 0 auto 10px;
+    &.drag {
+      .block-title {
+        cursor: move;
+      }
+    }
+
+    .blockTitle {
+      line-height: 30px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+
+
+      .link,
+      .tips {
+        font-size: 12px;
+        font-weight: normal;
+      }
+
+      .link {
+        letter-spacing: 1px
+      }
+
+      .tips {
+        color: #9797a1;
+      }
+    }
+
+    .blockItem {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      .tips {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #9797a1;
+      }
+
+      &Common {
+        flex: 1;
+
+        &Row {
+          display: flex;
+          margin-bottom: 6px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &Custom {
+        margin-left: 20px;
+      }
+
+    }
+  }
+
+  // 颜色选择器
+  .itemColorPicker {
+    display: flex;
+    :global{
+      //颜色选择器表单css
+      .ant-row.ant-form-item{
+        margin-bottom: 0;
+      }
+    }
+    // 重置颜色
+    .restColor {
+      margin-right: 10px;
+      font-size: 12px;
+      line-height: 32px;
+      cursor: pointer;
+      color: @primary-color  !important;
+    }
+
+    // 颜色选择组件
+    .mColorPicker {
+      display: block;
+      background-color: #ffffff;
+      border: 1px solid #efefef;
+      padding: 5px;
+      width: 61px;
+      :global{
+        .colorBtn {
+          cursor: pointer;
+          width: 48px;
+          height: 20px;
+          border: 1px solid #000;
+        }
+        .box {
+          left: -152px;
+          top: 35px;
+        }
+      }
+    }
+
+  }
+
+  // 新增数据
+  .dataAdd {
+    margin-top: 10px;
+    :global{
+      .ant-btn{
+        width: 100%;
+        color: @primary-color;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 12px;
+        border-color: #cccccc21;
+  
+        &:hover {
+          border-color: @primary-color;
+        }
+      }
+    }
+  }
+
+  // 滑块组件
+.itemSlider {
+  width: 100%;
+  display: flex;
+  :global{
+    .ant-slider {
+      flex: 1;
+      margin: 10px 10px 10px 6px;
+      .ant-slider-rail {
+        background: #dfdfe1;
+      }
+    }
+  }
+}
+
+// 单位
+.unitText {
+  padding: 0 10px;
+  line-height: 32px;
+  font-size: 12px;
+}
