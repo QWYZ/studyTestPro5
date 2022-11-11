@@ -183,40 +183,40 @@ export const EditUserModal = (props) => {
           </Col>
         </Row>
         <Row style={fontSize}>
-          <Col span={6}></Col>
+          <Col span={6} />
           <Col span={12} style={colStyle}>
             <span style={iconSize}><IdcardOutlined /></span>
             <span style={lableStyle}>用户账号</span>
             <span style={marginLeft1}>{modalData?.username}</span>
           </Col>
-          <Col span={6}></Col>
+          <Col span={6} />
         </Row>
         <Row style={fontSize}>
-          <Col span={6}></Col>
+          <Col span={6} />
           <Col span={12} style={colStyle}>
             <span style={iconSize}><UserOutlined /></span>
             <span style={lableStyle}>用户姓名</span>
             <span style={marginLeft1}>{modalData?.realname}</span>
           </Col>
-          <Col span={6}></Col>
+          <Col span={6} />
         </Row>
         <Row style={fontSize}>
-          <Col span={6}></Col>
+          <Col span={6} />
           <Col span={12} style={colStyle}>
             <span style={iconSize}><TeamOutlined /></span>
             <span style={lableStyle}>用户角色</span>
             <span style={marginLeft1}>{roleNameByRoleId(formVals.roleIds)}</span>
           </Col>
-          <Col span={6}></Col>
+          <Col span={6} />
         </Row>
         <Row style={fontSize}>
-          <Col span={6}></Col>
+          <Col span={6} />
           <Col span={12} style={colStyle}>
             <span style={iconSize}><MobileOutlined /></span>
             <span style={lableStyle}>手机号</span>
             <span style={marginLeft1}>{modalData?.phone}</span>
           </Col>
-          <Col span={6}></Col>
+          <Col span={6} />
         </Row>
       </>
     )

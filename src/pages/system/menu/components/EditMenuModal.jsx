@@ -269,7 +269,7 @@ export const EditMenuDrawer = (props) => {
             placeholder="请选择接口"
             treeData={apiList}
             fieldNames={{ label: 'name', value: 'id' }}
-          ></TreeSelect>
+           />
         </Form.Item>
         {menuType === 1 && (
           <Form.Item

@@ -2218,7 +2218,7 @@ class CenterPage1 extends PureComponent {
 
     return (
       <>
-        <Map mapData={mapData}></Map>
+        <Map mapData={mapData} />
       </>
     );
   }

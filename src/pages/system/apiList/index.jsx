@@ -153,7 +153,7 @@ const ApiList = () => {
                             columns={columns}
                             request={(params, sorter, filter) => httpList()}
                             dataSource={testData}
-                        ></ProTable>
+                         />
                     </div>
                     <ApiCheckModal
                         modalVisible={apiCheckModalVisible}

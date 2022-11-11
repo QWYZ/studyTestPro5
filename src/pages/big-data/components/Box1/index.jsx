@@ -16,7 +16,7 @@ const Box1 = (props) => {
                 {children}
             </div>
             {/* 伪元素绘制盒子下边角 */}
-            <div className="panel-footer"></div>
+            <div className="panel-footer" />
         </div>
     );
 }

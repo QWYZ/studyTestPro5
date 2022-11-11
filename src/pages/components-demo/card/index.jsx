@@ -6,7 +6,7 @@ import Card1 from './components/card1';
 
 const CardDomo = () => {
     return (
-        <PageContainer breadcrumb={false} subTitle={<a target={'_blank'} href={'https://qwyz.github.io/rcomponents/docs-dist/#/'}>👉我的组件库</a>}>
+        <PageContainer breadcrumb={false} subTitle={<a target={'_blank'} href={'https://qwyz.github.io/rcomponents/docs-dist/#/'} rel="noreferrer">👉我的组件库</a>}>
             <div>
                 <Alert
                     message={<h4>Card1组件API说明</h4>}

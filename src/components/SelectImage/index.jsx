@@ -45,9 +45,9 @@ const SelectImage = (props) => {
 
         return (
             <div className={'file-item'} style={{ width: `${width}px`, height: `${width}px` }}>
-                <a href={value?.preview_url} target="_blank">
+                <a href={value?.preview_url} target="_blank" rel="noreferrer">
                     {/* <img className={"img-cover"} src={value?.preview_url} alt="" /> */}
-                    <div className={"img-cover"} style={{ backgroundImage: `url('${value?.preview_url}')` }}></div>
+                    <div className={"img-cover"} style={{ backgroundImage: `url('${value?.preview_url}')` }} />
                 </a>
                 <CloseCircleFilled className={"icon-close"} onClick={() => { handleDeleteFileItem(sortIndex) }} />
             </div>

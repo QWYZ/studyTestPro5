@@ -87,7 +87,7 @@ const Workplace = () => {
       content={<PageHeaderContent currentUser={currentUser || {}} />}
       extraContent={<ExtraContent />}
     >
-      <SyntheticImages canvaswidth={500} canvasheight={300}></SyntheticImages>
+      <SyntheticImages canvaswidth={500} canvasheight={300} />
 
     </PageContainer>
   );

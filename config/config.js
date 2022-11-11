@@ -51,6 +51,9 @@ export default defineConfig({
   },
   // Fast Refresh 热更新
   fastRefresh: {},
+  chainWebpack:(config)=>{
+    config.module.rule('mjs-rule').test(/\.m?js$/).resolve.set('fullySpecified', false);
+  },
   // openAPI: [
   //   {
   //     requestLibPath: "import { request } from 'umi'",

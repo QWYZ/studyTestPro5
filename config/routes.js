@@ -104,7 +104,7 @@ export default [
   },
   {
     path: '/users',
-    name: '用户中心',
+    name: '用户管理',
     icon: 'team',
     routes: [
       {
@@ -161,11 +161,11 @@ export default [
         path: '/store',
         redirect: '/store/setting',
       },
-      {
-        path: '/store/setting',
-        name: '店铺设置',
-        component: './store/storeSetting',
-      },
+      // {
+      //   path: '/store/setting',
+      //   name: '店铺设置',
+      //   component: './store/storeSetting',
+      // },
       {
         path: '/store/decoration',
         name: '店铺装修',
@@ -177,14 +177,19 @@ export default [
     ]
   },
   {
-    path: '/data-statistics-components',
-    name: '数据统计组件',
+    path: '/componentsDemo',
+    name: '组件',
     icon: 'star',
     routes: [
       {
-        path: '/data-statistics-components/card',
+        path: '/componentsDemo/card',
         name: '卡片组件',
-        component: './data-statistics-components/card',
+        component: './components-demo/card',
+      },
+      {
+        path: '/componentsDemo/cameraPc',
+        name: 'PC端拍照',
+        component: './components-demo/cameraPc',
       },
       {
         component: './404',

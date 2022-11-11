@@ -55,7 +55,7 @@ export const bannerUIRender = (data) => {
                 dots
                 customPaging={i => {
                     return (
-                        <div><button style={{ background: selectDotsColor }}></button></div>
+                        <div><button style={{ background: selectDotsColor }} /></div>
                     )
                 }}
             >
@@ -78,7 +78,7 @@ export const bannerUIRender = (data) => {
 
 /**辅助空白 */
 export const blankUIRender = (data) => (
-    <div style={{ height: `${data.style.height}px`, background: data.style.background }}></div>
+    <div style={{ height: `${data.style.height}px`, background: data.style.background }} />
 )
 
 /**辅助线 */
@@ -92,9 +92,7 @@ export const guideUIRender = (data) => {
                     borderTopColor: data.style.lineColor,
                     borderTopStyle: data.style.lineStyle
                 }}
-            >
-
-            </p>
+             />
         </div>
     )
 }

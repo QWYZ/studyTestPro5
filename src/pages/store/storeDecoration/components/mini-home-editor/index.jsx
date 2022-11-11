@@ -147,7 +147,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                     </div>
@@ -243,9 +243,7 @@ const MiniHomeEditor = (props) => {
                         </div>
                         <div className={styles.blockItem}>
                             <span className={styles.label}>链接</span>
-                            <div className={styles.flexBox}>
-
-                            </div>
+                            <div className={styles.flexBox} />
                         </div>
                     </div>
                 </Tabs.TabPane>
@@ -273,7 +271,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                         <div className={styles.blockItem}>
@@ -297,7 +295,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                     </div>
@@ -474,7 +472,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                         <div className={styles.blockItem}>
@@ -551,7 +549,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                     </div>
@@ -605,7 +603,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                         <div className={styles.blockItem}>
@@ -669,7 +667,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                     </div>
@@ -858,7 +856,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                     </div>
@@ -905,7 +903,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                     </div>
@@ -1077,7 +1075,7 @@ const MiniHomeEditor = (props) => {
                                             pageDataChange(allData)
                                         }
                                     }}
-                                ></ProFormColorPicker>
+                                 />
                             </div>
                         </div>
                     </div>

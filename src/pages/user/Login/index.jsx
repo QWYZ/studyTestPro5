@@ -184,7 +184,7 @@ const Login = () => {
                   type="text"
                 />
                 <div className={style.code} onClick={() => { getCodeImg(); }}><img src={captchaImg} className={style.code_img} /></div>
-              </div> : <div></div>
+              </div> : <div />
             }
 
 

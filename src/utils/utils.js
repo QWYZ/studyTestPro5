@@ -616,3 +616,15 @@ export function systemInfo() {
   }
   return platform;
 }
+
+/**移动文件位置
+ * @param preList 原数组
+ */
+ export const arrayMoveImmutable = (array,oldIndex,newIndex) =>{
+  array = [...array]
+  if(oldIndex===newIndex){return array}
+  const [item] = array.splice(oldIndex,1);
+  array.splice(newIndex, 0, item);
+
+  return array
+ }

@@ -245,9 +245,7 @@ class Menu extends Component {
                     rowKey="menu_id"
                     columns={columns}
                     request={(params, sorter, filter) => this._httpMemuList()}
-                >
-
-                </ProTable>
+                 />
             </div>
             <EditMenuDrawer 
                 visible={this.state.visibleDrawer}

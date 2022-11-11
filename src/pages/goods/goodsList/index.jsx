@@ -108,9 +108,7 @@ const productList = () => {
                 // dataSource={dataSource}
                 // request={(params, sorter, filter) => toGetCategoryList(params, sorter, filter)}
                 columns={columns}
-            >
-
-            </ProTable>
+             />
         </PageContainer>
     )
 }

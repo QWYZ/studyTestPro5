@@ -206,9 +206,7 @@ const MultiSpec = (props) => {
             </Form.Item>
             {multiSpecData.skuList.length > 0 &&
                 <Form.Item label="SKU列表" wrapperCol={wrapperCol}>
-                    <Table className="sku-list" columns={columns} dataSource={multiSpecData.skuList || []} scroll={{ x: true }} pagination={false} bordered>
-
-                    </Table>
+                    <Table className="sku-list" columns={columns} dataSource={multiSpecData.skuList || []} scroll={{ x: true }} pagination={false} bordered />
                 </Form.Item>
             }
 

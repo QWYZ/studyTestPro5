@@ -132,7 +132,7 @@ const Menu = () => {
           columns={columns}
           request={(params, sorter, filter) => _httpMemuList()}
           dataSource={testData}
-        ></ProTable>
+         />
       </div>
       <EditMenuModal
         editModalType={editModalType}

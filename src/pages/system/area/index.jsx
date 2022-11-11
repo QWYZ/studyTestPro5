@@ -109,9 +109,7 @@ const Area = () => {
                     columns={columns}
                     dataSource={cityData}
                 // request={(params, sorter, filter) => this._httpMemuList()}
-                >
-
-                </ProTable>
+                 />
             </div>
             <EditModal
                 editModalType={editModalType}

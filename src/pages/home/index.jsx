@@ -11,6 +11,9 @@ import Chart2 from './components/Chart2';
 import SearchForm from '@/components/SearchForm';
 import MapEchart from './components/mapEchart';
 import { Link } from 'umi';
+import ImageUpload from '@/components/ImageUpload';
+import { useId } from 'react';
+import Test from './Test';
 
 const { Header, Footer, Sider, Content } = Layout;
 const { TabPane } = Tabs;
@@ -43,6 +46,8 @@ const Home = () => {
         initialFrameHeight: 400,
     });
     const [initData] = useState('');
+    const [title1,setTitle1] = useState('大屏数据可视化')
+    const [rangeValue, setRangeValue] = useState(0);
     //富文本失焦就触发setContent函数设置表单的content内容
     const setContent = (e) => {
         console.log('setContent--home', e);
@@ -50,17 +55,50 @@ const Home = () => {
         //     content: ueRef.current.getUEContent()
         // })
     };
-    const [rangeValue, setRangeValue] = useState(0);
 
+
+    const getlinkCss = () => {
+        let headHTML = document.getElementsByTagName('head')[0].innerHTML;
+        headHTML += '<link type="text/css" rel="stylesheet" href="src/assets/test.css">';
+        document.getElementsByTagName('head')[0].innerHTML = headHTML;
+    }
+    function addCssByLink(url) {
+        var doc = document;
+        var link = doc.createElement("link");
+        link.setAttribute("rel", "stylesheet");
+        link.setAttribute("type", "text/css");
+        link.setAttribute("href", url);
+
+        var heads = doc.getElementsByTagName("head");
+        if (heads.length)
+            heads[0].appendChild(link);
+        else
+            doc.documentElement.appendChild(link);
+
+    }
+    
     return (
         <GridContent>
             <Row>
                 <Col span={24}>
                     <Button type='link'>
-                        <Link to={'/big-data/demo1'}>大屏可视化demo1</Link>
+                        <Link to={'/big-data/demo1'}>{title1}</Link>
                     </Button>
+                    <Button onClick={()=>{title1 = 'hhaah'; console.log(title1)}}>一</Button>
+                    <Button onClick={()=>{setTitle1('hhaah'); console.log(title1)}}>二</Button>
+                    <Test />
                 </Col>
             </Row>
+            <Card>
+                <Row>
+                    <Col span={24}>
+                        <ImageUpload />
+                    </Col>
+                </Row>
+            </Card>
+
+
+            <Button onClick={() => { getlinkCss(); }}>点击</Button>
         </GridContent>
     );
 };

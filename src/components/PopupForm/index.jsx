@@ -44,8 +44,7 @@ export const PopupForm = (props) => {
         width={width}
         footer={
           <Row gutter={24}>
-            <Col span={8} style={{textAlign: 'left'}}>
-            </Col>
+            <Col span={8} style={{textAlign: 'left'}} />
             <Col span={16} style={{textAlign: 'right'}}>
               <Button type={'default'} onClick={() => {
                 onCancel()

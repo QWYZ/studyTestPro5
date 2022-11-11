@@ -12,9 +12,7 @@ const StoreSetting = () => {
     return (
         <PageContainer
             header={{ title: false }}
-        >
-            
-        </PageContainer>
+         />
     )
 }
 

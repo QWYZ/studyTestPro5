@@ -106,7 +106,7 @@ const CreateProduct = () => {
                         { required: true }
                     ]}
                 >
-                    <TreeSelect treeData={[]} placeholder={'请选择商品分类'}></TreeSelect>
+                    <TreeSelect treeData={[]} placeholder={'请选择商品分类'} />
                 </Form.Item>
                 <Form.Item
                     wrapperCol={{ span: 12 }}
@@ -248,7 +248,7 @@ const CreateProduct = () => {
                         placeholder={'请选择菜单权限'}
                         multiple
                         treeCheckable
-                    ></TreeSelect>
+                     />
                 </Form.Item>
             </Form>
         )

@@ -520,9 +520,7 @@ const FileModal = (props) => {
                                 expandedKeys={expandedKeys}
                                 selectedKeys={selectedKey}
                                 onSelect={onSelectGroup}
-                            >
-
-                            </Tree>
+                             />
                         </div>
                         <a className="group-add" onClick={() => { setEditGroupType({ type: 'add' }) }}>新增分组</a>
                     </div>
@@ -561,7 +559,7 @@ const FileModal = (props) => {
                                                 key={index}
                                                 onClick={() => { onSelectItem(index) }}
                                             >
-                                                <div className="img-cover" style={{ backgroundImage: `url('${item.preview_url}')` }}></div>
+                                                <div className="img-cover" style={{ backgroundImage: `url('${item.preview_url}')` }} />
                                                 <p className="file-name oneline-hide">{item.file_name}</p>
                                                 <div className="select-mask">
                                                     <CheckOutlined className="selected-icon" />

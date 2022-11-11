@@ -260,7 +260,7 @@ export const EditMenuDrawer = (props) => {
                                 placeholder={'选择按钮功能'}
                                 options={optionBtn}
                                 onChange={(e) => { selectOnChange(e, modalData?.perms) }}
-                            ></Select>
+                             />
                         </Form.Item>
                         <Form.Item
                             labelCol={labelCol}

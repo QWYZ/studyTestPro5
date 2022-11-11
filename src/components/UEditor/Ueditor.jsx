@@ -90,8 +90,8 @@ const UEditor = (props) => {
 
     return (
         <>
-            <script id={ueditorId} type="text/plain"></script>
-            <input type={"file"} id={"ueditor_btn_file"} accept={"image/*"} onChange={(e) => fileOnChange(e)} style={{ display: 'none' }}></input>
+            <script id={ueditorId} type="text/plain" />
+            <input type={"file"} id={"ueditor_btn_file"} accept={"image/*"} onChange={(e) => fileOnChange(e)} style={{ display: 'none' }} />
             <FileModal
                 multiple={false}
                 maxNum={1}
