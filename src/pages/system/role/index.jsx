@@ -1,7 +1,6 @@
 import styles from './styles.less';
-import React, { Component } from 'react';
-// import { connect } from 'dva';
-import ProTable, { TableDropdown } from '@ant-design/pro-table';
+import { Component,createRef } from 'react';
+import ProTable from '@ant-design/pro-table';
 import { PageContainer } from '@ant-design/pro-layout';
 import { PlusOutlined, CloseCircleFilled } from '@ant-design/icons';
 import { queryRoleList, deleteRole, setRolePermission } from '@/services/system/role';
@@ -13,12 +12,8 @@ import {
     handleIds,
 } from './shareway';
 import { CheckButtonPerms } from "@/components/CheckButtonPerms";
-// import { Access, useAccess } from 'umi';
-// import access from '@/access';
-
-
 // const authority = null
-const actionRef = React.createRef();
+const actionRef = createRef();
 
 class Role extends Component {
     constructor(props) {
